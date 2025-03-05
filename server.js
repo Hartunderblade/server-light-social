@@ -17,6 +17,7 @@ const authRoutes = require('./routes/authRoutes');
 const authMiddleware = require('./middleware/authMiddleware');
 const categoryRoutes = require('./routes/categoryRoutes');
 const userRoutes = require('./routes/userRoutes');
+const postRoutes = require("./routes/postRoutes");
 
 app.use(cors());
 app.use(bodyParser.json());
@@ -27,6 +28,7 @@ app.use('/auth', authRoutes);
 app.use('/users', userRoutes);
 
 app.use('/categories', categoryRoutes);
+app.use("/posts", postRoutes);
 
 // app.use('/users', userRoutes);
 

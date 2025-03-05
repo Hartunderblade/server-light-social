@@ -14,7 +14,7 @@ router.get('/me', authMiddleware, async (req, res) => {
     }
 });
 
-// 📌 Получить данные профиля
+// Получить данные профиля
 router.get('/profile', authMiddleware, async (req, res) => {
     const userId = req.user.id;
 
